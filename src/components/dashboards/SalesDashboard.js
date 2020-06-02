@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import BarChart from "../charts/BarChart";
 import LineChart from "../charts/LineChart";
-// import BubbleChart from "../charts/BubbleChart";
-// import DoughnutChart from "../charts/DoughnutChart";
-// import PieChart from "../charts/PieChart";
 import chartIcon from "../../assets/chart-icon.svg";
 import {
   managerData,
@@ -51,13 +48,8 @@ const SalesDashboard = () => {
           Last Quarter
         </button>
       </div>
-      {/* Display 2 charts by default using mockData.js */}
       <BarChart data={data} average={average} labels={labels} />
       <LineChart data={data} average={average} labels={labels} />
-
-      {/*<BubbleChart />*/}
-      {/*<DoughnutChart />*/}
-      {/*<PieChart />*/}
     </div>
   );
 };
