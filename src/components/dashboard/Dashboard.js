@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import BarChart from "../charts/BarChart";
 import LineChart from "../charts/LineChart";
-import BubbleChart from "../charts/BubbleChart";
-import DoughnutChart from "../charts/DoughnutChart";
-import PieChart from "../charts/PieChart";
+// import BubbleChart from "../charts/BubbleChart";
+// import DoughnutChart from "../charts/DoughnutChart";
+// import PieChart from "../charts/PieChart";
 import chartIcon from "../../assets/chart-icon.svg";
 import {
   managerData,
