@@ -20,7 +20,6 @@ const BubbleChart = () => {
     bubbleChart = new Chart(bubbleChartRef, {
       type: "bubble",
       data: {
-        labels: "Africa",
         datasets: [
           {
             label: ["China"],
@@ -35,7 +34,7 @@ const BubbleChart = () => {
             ],
           },
           {
-            label: ["Denmark"],
+            label: ["UK"],
             backgroundColor: "rgba(60,186,159,0.2)",
             borderColor: "rgba(60,186,159,1)",
             data: [
@@ -82,7 +81,7 @@ const BubbleChart = () => {
             {
               scaleLabel: {
                 display: true,
-                labelString: "Happiness",
+                labelString: "Health",
               },
             },
           ],
@@ -95,6 +94,8 @@ const BubbleChart = () => {
             },
           ],
         },
+        responsive: true,
+        maintainAspectRatio: false,
       },
     });
   };

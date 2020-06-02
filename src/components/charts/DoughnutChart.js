@@ -20,27 +20,31 @@ const DoughnutChart = () => {
     doughnutChart = new Chart(doughnutChartRef, {
       type: "doughnut",
       data: {
-        labels: [
-          "Saudi Arabia",
-          "Russia",
-          "Iraq",
-          "United Arab Emirates",
-          "Canada",
-        ],
+        labels: ["China", "UK", "Germany", "Japan"],
         datasets: [
           {
-            data: [133.3, 86.2, 52.2, 51.2, 50.2],
+            data: [133.3, 86.2, 52.2, 51.2],
             backgroundColor: [
-              "#FF6384",
-              "#ffc163",
-              "#84FF63",
-              "#8463FF",
-              "#6384FF",
+              "rgba(255,221,50,0.2)",
+              "rgba(60,186,159,0.2)",
+              "rgba(0,0,0,0.2)",
+              "rgba(193,46,12,0.2)",
             ],
+            borderColor: [
+              "rgba(255,221,50,1)",
+              "rgba(60,186,159,1)",
+              "#000",
+              "rgba(193,46,12,1)",
+            ],
+            borderWidth: 1,
           },
         ],
       },
       options: {
+        title: {
+          display: true,
+          text: "Predicted GDP £ (millions) in 2050",
+        },
         responsive: true,
         maintainAspectRatio: false,
       },

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import BarChart from "../charts/BarChart";
 import LineChart from "../charts/LineChart";
 // import BubbleChart from "../charts/BubbleChart";
@@ -13,9 +14,9 @@ import {
   nationalAverageQuarterData,
   quarterLabels,
 } from "../../data/mockData";
-import classes from "./Dashboard.module.css";
+import classes from "./SalesDashboard.module.css";
 
-const Dashboard = () => {
+const SalesDashboard = () => {
   const [data, setData] = useState(managerData);
   const [average, setAverage] = useState(nationalAverageData);
   const [labels, setLabels] = useState(yearLabels);
@@ -40,6 +41,7 @@ const Dashboard = () => {
       <header>
         <img src={chartIcon} alt="bar chart icon" />
         <h1>Sales Dashboard</h1>
+        <Link to="/">Dashboard</Link>
       </header>
       <div className={classes.buttonContainer}>
         <button value="annual" onClick={handleClick}>
@@ -60,4 +62,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default SalesDashboard;
