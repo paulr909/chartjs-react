@@ -78,6 +78,7 @@ header a:hover {
   color: #e3e3e3;
   background-color: var(--theme-primary);
   border-color: #fff;
+  cursor: pointer;
 }
 
 button[value="annual"] {
