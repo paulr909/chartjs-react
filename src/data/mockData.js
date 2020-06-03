@@ -74,31 +74,16 @@ export const yearLabels = [
 ];
 
 export const quarterLabels = [
-  "Week 1",
-  "Week 2",
-  "Week 3",
-  "Week 4",
-  "Week 5",
-  "Week 6",
-  "Week 7",
-  "Week 8",
-  "Week 9",
-  "Week 10",
-  "Week 11",
-  "Week 12",
-];
-
-export const districtManagerData = [
-  { sum: 13100, newarkBranch: 4500, austinBranch: 3700, denverBranch: 4900 },
-  { sum: 12500, newarkBranch: 3900, austinBranch: 3700, denverBranch: 4900 },
-  { sum: 12050, newarkBranch: 3450, austinBranch: 3700, denverBranch: 4900 },
-  { sum: 13200, newarkBranch: 4600, austinBranch: 3700, denverBranch: 4900 },
-  { sum: 13035, newarkBranch: 4435, austinBranch: 3700, denverBranch: 4900 },
-  { sum: 12700, newarkBranch: 4100, austinBranch: 3700, denverBranch: 4900 },
-  { sum: 13720, newarkBranch: 5120, austinBranch: 3700, denverBranch: 4900 },
-  { sum: 13550, newarkBranch: 4700, austinBranch: 3950, denverBranch: 4900 },
-  { sum: 12700, newarkBranch: 4100, austinBranch: 3700, denverBranch: 4900 },
-  { sum: 12800, newarkBranch: 4200, austinBranch: 3700, denverBranch: 4900 },
-  { sum: 11800, newarkBranch: 3950, austinBranch: 3650, denverBranch: 4200 },
-  { sum: 12745, newarkBranch: 3620, austinBranch: 3780, denverBranch: 5345 },
+  "Week 41",
+  "Week 42",
+  "Week 43",
+  "Week 44",
+  "Week 45",
+  "Week 46",
+  "Week 47",
+  "Week 48",
+  "Week 49",
+  "Week 50",
+  "Week 51",
+  "Week 52",
 ];
