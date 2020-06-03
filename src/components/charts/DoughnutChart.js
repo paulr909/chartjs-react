@@ -43,7 +43,7 @@ const DoughnutChart = () => {
       options: {
         title: {
           display: true,
-          text: "Predicted GDP £ (millions) in 2050",
+          text: "Predicted GDP £ (billion) in 2050",
         },
         responsive: true,
         maintainAspectRatio: false,

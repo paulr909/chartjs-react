@@ -74,7 +74,7 @@ const BubbleChart = () => {
       options: {
         title: {
           display: true,
-          text: "Predicted world population (millions) in 2050",
+          text: "Predicted world population (million) in 2050",
         },
         scales: {
           yAxes: [
