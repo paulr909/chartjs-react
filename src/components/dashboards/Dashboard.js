@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BubbleChart from "../charts/BubbleChart";
-import DoughnutChart from "../charts/DoughnutChart";
+// import DoughnutChart from "../charts/DoughnutChart";
 import PieChart from "../charts/PieChart";
 import chartIcon from "../../assets/chart-icon.svg";
 import classes from "./Dashboard.module.css";
