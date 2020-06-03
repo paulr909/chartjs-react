@@ -1,8 +1,6 @@
 # Chart.js in React
 
-## Line and Bar chart as default
-
-### Bubble Doughnut and Pie charts as optional
+## Line, Bar, Bubble, Doughnut and Pie charts
 
 Using React Hooks and CSS Modules
 
