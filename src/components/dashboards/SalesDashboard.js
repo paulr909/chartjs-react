@@ -39,6 +39,7 @@ const SalesDashboard = () => {
         <img src={chartIcon} alt="bar chart icon" />
         <h1>Sales Dashboard</h1>
         <Link to="/">Dashboard</Link>
+        <Link to="/sales-dashboard">Sales Dashboard</Link>
       </header>
       <div className={classes.buttonContainer}>
         <button value="annual" onClick={handleClick}>

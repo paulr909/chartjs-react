@@ -12,6 +12,7 @@ const Dashboard = () => {
       <header>
         <img src={chartIcon} alt="bar chart icon" />
         <h1>Dashboard</h1>
+        <Link to="/">Dashboard</Link>
         <Link to="/sales-dashboard">Sales Dashboard</Link>
       </header>
       <BubbleChart />
