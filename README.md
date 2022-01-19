@@ -1,11 +1,9 @@
-# Chart.js in React
-
-## Line, Bar, Bubble, Doughnut and Pie charts
+# Chart.js with React
 
 Using React Hooks and CSS Modules
 
 ```
-yarn install
+npm install
 
-yarn start
+npm start
 ```

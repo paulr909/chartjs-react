@@ -3,35 +3,42 @@ import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
-  PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend,
 } from "chart.js";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import faker from "faker";
 import classes from "./Chart.module.css";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend
 );
 
 export const options = {
-  responsive: true,
   plugins: {
-    legend: {
-      position: "top",
-    },
     title: {
       display: true,
-      text: "Chart.js Line Chart",
+      text: "Chart.js Bar Chart - Stacked",
+    },
+  },
+  responsive: true,
+  interaction: {
+    mode: "index",
+    intersect: false,
+  },
+  scales: {
+    x: {
+      stacked: true,
+    },
+    y: {
+      stacked: true,
     },
   },
 };
@@ -44,22 +51,28 @@ export const data = {
     {
       label: "Dataset 1",
       data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      backgroundColor: "rgb(255, 99, 132)",
+      stack: "Stack 0",
     },
     {
       label: "Dataset 2",
       data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-      borderColor: "rgb(53, 162, 235)",
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      backgroundColor: "rgb(75, 192, 192)",
+      stack: "Stack 0",
+    },
+    {
+      label: "Dataset 3",
+      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      backgroundColor: "rgb(53, 162, 235)",
+      stack: "Stack 1",
     },
   ],
 };
 
-export function LineChart() {
+export function StackedBarChart() {
   return (
     <div className={classes.graphContainer}>
-      <Line options={options} data={data} />;
+      <Bar options={options} data={data} />;
     </div>
   );
 }

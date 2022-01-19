@@ -1,61 +1,41 @@
-import React, { useEffect, createRef } from "react";
-import Chart from "chart.js";
-import classes from "./DoughnutChart.module.css";
+import React from "react";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+import classes from "./Chart.module.css";
 
-let doughnutChart;
-Chart.defaults.global.defaultFontFamily = "sans-serif";
-Chart.defaults.global.legend.display = true;
+ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DoughnutChart = () => {
-  const chartRef = createRef();
-
-  useEffect(() => {
-    buildChart();
-  });
-
-  const buildChart = () => {
-    const doughnutChartRef = chartRef.current.getContext("2d");
-    if (typeof doughnutChart !== "undefined") doughnutChart.destroy();
-
-    doughnutChart = new Chart(doughnutChartRef, {
-      type: "doughnut",
-      data: {
-        labels: ["China", "UK", "Germany", "Japan"],
-        datasets: [
-          {
-            data: [133.3, 86.2, 52.2, 51.2],
-            backgroundColor: [
-              "rgba(255,221,50,0.2)",
-              "rgba(60,186,159,0.2)",
-              "rgba(0,0,0,0.2)",
-              "rgba(193,46,12,0.2)",
-            ],
-            borderColor: [
-              "rgba(255,221,50,1)",
-              "rgba(60,186,159,1)",
-              "#000",
-              "rgba(193,46,12,1)",
-            ],
-            borderWidth: 1,
-          },
-        ],
-      },
-      options: {
-        title: {
-          display: true,
-          text: "Predicted GDP £ (billion) in 2050",
-        },
-        responsive: true,
-        maintainAspectRatio: false,
-      },
-    });
-  };
-
-  return (
-    <div className={classes.graphContainer}>
-      <canvas id="doughnutChart" ref={chartRef} />
-    </div>
-  );
+export const data = {
+  labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+  datasets: [
+    {
+      label: "# of Votes",
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: [
+        "rgba(255, 99, 132, 0.2)",
+        "rgba(54, 162, 235, 0.2)",
+        "rgba(255, 206, 86, 0.2)",
+        "rgba(75, 192, 192, 0.2)",
+        "rgba(153, 102, 255, 0.2)",
+        "rgba(255, 159, 64, 0.2)",
+      ],
+      borderColor: [
+        "rgba(255, 99, 132, 1)",
+        "rgba(54, 162, 235, 1)",
+        "rgba(255, 206, 86, 1)",
+        "rgba(75, 192, 192, 1)",
+        "rgba(153, 102, 255, 1)",
+        "rgba(255, 159, 64, 1)",
+      ],
+      borderWidth: 1,
+    },
+  ],
 };
 
-export default DoughnutChart;
+export function DoughnutChart() {
+  return (
+    <div className={classes.graphContainer}>
+      <Doughnut data={data} />;
+    </div>
+  );
+}
