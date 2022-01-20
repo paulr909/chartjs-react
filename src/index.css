@@ -4,5 +4,5 @@ body {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --theme-primary: rgb(223, 212, 212);
+  --theme-primary: #36A2EB;
 }

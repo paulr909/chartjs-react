@@ -9,6 +9,8 @@ export const data = {
   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   datasets: [
     {
+      maintainAspectRatio: false,
+      responsive: false,
       label: "# of Votes",
       data: [12, 19, 3, 5, 2, 3],
       backgroundColor: [
@@ -35,7 +37,7 @@ export const data = {
 export function PieChart() {
   return (
     <div className={classes.graphContainer}>
-      <Pie data={data} />;
+      <Pie data={data} width="800" height="450" />;
     </div>
   );
 }

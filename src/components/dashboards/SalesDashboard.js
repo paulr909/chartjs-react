@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BarChart } from "../charts/BarChart";
 import { LineChart } from "../charts/LineChart";
 import chartIcon from "../../assets/chart-icon.svg";
 import classes from "./Dashboard.module.css";
@@ -14,7 +13,6 @@ const SalesDashboard = () => {
         <Link to="/">Dashboard</Link>
         <Link to="/sales-dashboard">Sales Dashboard</Link>
       </header>
-      <BarChart />
       <LineChart />
     </div>
   );
